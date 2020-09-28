@@ -9,18 +9,22 @@ The synthetic faces, which we call 'transects', vary faces along skin color, hai
  
 If you use this dataset, please cite our paper:
 
-[Towards causal benchmarking of bias in face analysis algorithms](https://arxiv.org/abs/2007.06570).
+> **Towards causal benchmarking of bias in face analysis algorithms**<br>
+> Guha Balakrishnan, Yuanjun Xiong, Wei Xia, Pietro Perona<br>
+> ECCV 2020<br>
+> https://arxiv.org/abs/2007.06570
 
 
 ## Repository Contents
 
 ./data: Images and raw Turk responses for four datasets
-    a. 3000 random CelebA-hq images
-    b. 3000 random Flickr-Faces-HQ (FFHQ) images
-    c. 5000 randomly generated synthetic images from StyleGAN2
-    d. 8000 synthetic transect images. 
+	1. 3000 random CelebA-hq images
+	2. 3000 random Flickr-Faces-HQ (FFHQ) images
+	3. 5000 randomly generated synthetic images from StyleGAN2
+	4. 8000 synthetic transect images. 
 
 ./read-sagemaker-responses: reads sagemaker annotator responses into data files for easy analysis
+
 ./make-violin-plots.ipynb: Plots attribute distributions for each dataset like the violin plots found in the ECCV 2020 paper.
 
 
