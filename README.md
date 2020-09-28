@@ -3,7 +3,7 @@
 ## Overview
 This is a dataset of real and synthetic human faces along with attribute annotations acquired through Amazon Mechanical Turk experiments. We annotated seven attributes per face: age, facial hair, gender, hair length, makeup, skin color, and smiling. For the synthetic transect images, we also annotated 'uncanniness' to help prune out badly generated examples for analysis. We used 4-6 semantic levels per attribute -- you can find our Mechanical Turk survey layouts explaining these levels in 'turk-layouts.' 
 
-The synthetic faces in this repository, which we call 'transects', vary faces along skin color, hair length and gender attributes while attempting to hold other attributes constant. Unlike datasets collected ''in the wild,'' transects offer better control and balance over facial attributes, allowing for **experimental** rather than observational(https://en.wikipedia.org/wiki/Observational_study) analyses of downstream face analysis systems or human observers.  
+The synthetic faces in this repository, which we call 'transects', vary faces along skin color, hair length and gender attributes while attempting to hold other attributes constant. Unlike datasets collected ''in the wild,'' transects offer better control and balance over facial attributes, allowing for **experimental** rather than [observational](https://en.wikipedia.org/wiki/Observational_study) analyses of downstream face analysis systems or human observers.  
 
 If you use this dataset, please cite our paper:
 
@@ -34,8 +34,8 @@ Make a note about how there are still biases of the generated images.
 ./data: Images and Mechanical Turk responses for four datasets:
 
 1. 3000 random CelebA-HQ images
-2. 3000 random FFHQ(https://github.com/NVlabs/ffhq-dataset) images
-3. 5000 randomly generated synthetic images from StyleGAN2(https://github.com/NVlabs/stylegan2)
+2. 3000 random [FFHQ](https://github.com/NVlabs/ffhq-dataset) images
+3. 5000 randomly generated synthetic images from [StyleGAN2](https://github.com/NVlabs/stylegan2)
 4. 8000 synthetic transect images
 
 read-sagemaker-responses.ipynb: Reads sagemaker annotator responses and saves them into pickled numpy files for easy analysis.
