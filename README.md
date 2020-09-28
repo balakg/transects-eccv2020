@@ -23,7 +23,7 @@ Our transect images were formed by traversing StyleGAN2's latent space in contro
 
 This results in 1000 x 2 x 2 x 2 = 8000 images.
 
-<div align="center"><img src=./images/transect-samples.pdf></div>
+<div align="center"><img src=./images/transect-samples.png></div>
 
 ## Repository Contents
 
