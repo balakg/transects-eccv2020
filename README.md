@@ -1,9 +1,9 @@
 # Transects-ECCV2020
 
 ## Overview
-This is a dataset of real and synthetic human faces along with attribute annotations acquired through Amazon Mechanical Turk experiments. We annotated seven attributes per face: age, facial hair, gender, hair length, makeup, skin color, and smiling. For the synthetic transect images, we also annotated 'uncanniness' to help prune out badly generated examples for analysis. We used 4-6 semantic levels per attribute -- you can find our Mechanical Turk survey layouts explaining these levels in 'turk-layouts.' 
+This is a dataset of real and synthetic human faces along with attribute annotations acquired through Amazon Mechanical Turk experiments. The synthetic **transects** in this repository vary faces along skin color, hair length and gender attributes while attempting to hold other attributes constant. Unlike datasets collected ''in the wild,'' transects offer better control and balance over facial attributes, allowing for **experimental** rather than [observational](https://en.wikipedia.org/wiki/Observational_study) analyses of downstream face analysis systems or human observers.  
 
-The synthetic faces in this repository, which we call 'transects', vary faces along skin color, hair length and gender attributes while attempting to hold other attributes constant. Unlike datasets collected ''in the wild,'' transects offer better control and balance over facial attributes, allowing for **experimental** rather than [observational](https://en.wikipedia.org/wiki/Observational_study) analyses of downstream face analysis systems or human observers.  
+We annotated seven attributes per face: age, facial hair, gender, hair length, makeup, skin color, and smiling. For the transect images, we also annotated 'uncanniness' to help prune out badly generated examples for analysis. We used 4-6 semantic levels per attribute -- you can find our Mechanical Turk survey layouts explaining these levels in 'turk-layouts.' 
 
 If you use this dataset, please cite our paper:
 
@@ -12,8 +12,8 @@ If you use this dataset, please cite our paper:
 > ECCV 2020<br>
 > https://arxiv.org/abs/2007.06570
 
-## Transect Data
-Our transect images were formed by traversing StyleGAN2's latent space in controlled semantic directions. We generated 1000 'seed' latent codes, and vary them in two discretization levels for three attributes:
+## Transects
+We generated our transect images by traversing [StyleGAN2](https://github.com/NVlabs/stylegan2)'s latent space in controlled semantic directions (plese see our paper for more details). We generated 1000 random 'seed' latent codes, and varied them along two discretization levels for three attributes:
 
 1. Skin color (dark and light)
 2. Hair Length (long and short/medium)
