@@ -1,12 +1,10 @@
 # Transects-ECCV2020
 
 ## Overview
-This is a dataset of real and synthetic hukan faces along with attribute annotations acquired through Amazon Mechanical Turk studies. We annotated seven attributes per face image: age, facial hair, gender, hair length, makeup, skin color, and smiling. For synthetic images, we also annotated 'uncanniness' to prune badly generated examples. 
+This is a dataset of real and synthetic human faces along with attribute annotations acquired through Amazon Mechanical Turk experiments. We annotated seven attributes per face: age, facial hair, gender, hair length, makeup, skin color, and smiling. For the synthetic transect images, we also annotated 'uncanniness' to help prune out badly generated examples for analysis. We used 4-6 semantic levels per attribute -- you can find our Mechanical Turk survey layouts explaining these levels in 'turk-layouts.' 
 
-We annotated each attribute using 4-6 semantic levels. You can find our Mechanical Turk survey layouts with these levels in 'turk-layouts'. 
+The synthetic faces in this repository, which we call 'transects', vary faces along skin color, hair length and gender attributes while attempting to hold other attributes constant. Unlike datasets collected ''in the wild,'' transects offer better control and balance over facial attributes, allowing for **experimental** rather than observational(https://en.wikipedia.org/wiki/Observational_study) analyses of downstream face analysis systems or human observers.  
 
-The synthetic faces, which we call 'transects', vary faces along skin color, hair length and gender attributes while attempting to hold other attributes constant. We used this data to conduct bias analyses of gender classifiers with respect to these factors. 
- 
 If you use this dataset, please cite our paper:
 
 > **Towards causal benchmarking of bias in face analysis algorithms**<br>
@@ -25,6 +23,10 @@ This results in 1000 x 2 x 2 x 2 = 8000 images.
 
 <div align="center"><img src=./images/transect-samples.png></div>
 
+## Bias and Fairness
+
+Make a note about how there are still biases of the generated images.
+
 ## Repository Contents
 
 ./turk-layouts: Mechanical turk survey screenshots. Contains our instructions to Turkers as well as the semantic levels of attributes and their descriptions.
@@ -32,9 +34,9 @@ This results in 1000 x 2 x 2 x 2 = 8000 images.
 ./data: Images and Mechanical Turk responses for four datasets:
 
 1. 3000 random CelebA-HQ images
-2. 3000 random Flickr-Faces-HQ (FFHQ) images
-3. 5000 randomly generated synthetic images from StyleGAN2
-4. 8000 synthetic transect images. 
+2. 3000 random FFHQ(https://github.com/NVlabs/ffhq-dataset) images
+3. 5000 randomly generated synthetic images from StyleGAN2(https://github.com/NVlabs/stylegan2)
+4. 8000 synthetic transect images
 
 read-sagemaker-responses.ipynb: Reads sagemaker annotator responses and saves them into pickled numpy files for easy analysis.
 
