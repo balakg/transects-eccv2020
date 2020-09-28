@@ -36,8 +36,8 @@ This results in 1000 x 2 x 2 x 2 = 8000 images.
 3. 5000 randomly generated synthetic images from StyleGAN2
 4. 8000 synthetic transect images. 
 
-read-sagemaker-responses.ipynb: reads sagemaker annotator responses into data files for easy analysis
+read-sagemaker-responses.ipynb: Reads sagemaker annotator responses and saves them into pickled numpy files for easy analysis.
 
-make-violin-plots.ipynb: Plots attribute distributions for each dataset similar to the violin plots found in our ECCV 2020 paper. 
+make-violin-plots.ipynb: Plots attribute distributions for each dataset similar to the violin plots found in our ECCV 2020 paper. Output looks like this:
 
-
+<div align="center"><img src=./images/dataset-comparison.png></div>
