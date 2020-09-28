@@ -23,9 +23,15 @@ This results in 1000 x 2 x 2 x 2 = 8000 images.
 
 <div align="center"><img src=./images/transect-samples.png></div>
 
+Note that transects may be generated for other attribute combinations. To train your own transects, please refer to our paper.
+
 ## Bias and Fairness
 
-Make a note about how there are still biases of the generated images.
+While our transects tend to be more balanced than real datasets, they are not immune to bias and fairness issues. We note several considerations here:
+
+1. The images are generated using StyleGAN2, which in turn was trained on the FFHQ dataset. Therefore, our transects will tend to generate appearances and physiognomies characteristic of those found in FFHQ. In addition, attribute combinations that are uncommon or missing in FFHQ may not be able to be generated. 
+
+2.  
 
 ## Repository Contents
 
