@@ -14,18 +14,30 @@ If you use this dataset, please cite our paper:
 > ECCV 2020<br>
 > https://arxiv.org/abs/2007.06570
 
+## Transect Data
+Our transect images were formed by traversing StyleGAN2's latent space in controlled semantic directions. We generated 1000 'seed' latent codes, and vary them in two discretization levels for three attributes:
+
+1. Skin color (dark and light)
+2. Hair Length (long and short/medium)
+3. Gender (male and female)
+
+This results in 1000 x 2 x 2 x 2 = 8000 images.
+
+<div align="center"><img src=./images/transect-samples.pdf></div>
 
 ## Repository Contents
 
-./data: Images and raw Turk responses for four datasets
+./turk-layouts: Mechanical turk survey screenshots. Contains our instructions to Turkers as well as the semantic levels of attributes and their descriptions.
 
-1. 3000 random CelebA-hq images
+./data: Images and Mechanical Turk responses for four datasets:
+
+1. 3000 random CelebA-HQ images
 2. 3000 random Flickr-Faces-HQ (FFHQ) images
 3. 5000 randomly generated synthetic images from StyleGAN2
 4. 8000 synthetic transect images. 
 
-./read-sagemaker-responses: reads sagemaker annotator responses into data files for easy analysis
+read-sagemaker-responses.ipynb: reads sagemaker annotator responses into data files for easy analysis
 
-./make-violin-plots.ipynb: Plots attribute distributions for each dataset like the violin plots found in the ECCV 2020 paper.
+make-violin-plots.ipynb: Plots attribute distributions for each dataset similar to the violin plots found in our ECCV 2020 paper. 
 
 
