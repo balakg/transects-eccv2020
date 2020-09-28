@@ -18,10 +18,11 @@ If you use this dataset, please cite our paper:
 ## Repository Contents
 
 ./data: Images and raw Turk responses for four datasets
-	1. 3000 random CelebA-hq images
-	2. 3000 random Flickr-Faces-HQ (FFHQ) images
-	3. 5000 randomly generated synthetic images from StyleGAN2
-	4. 8000 synthetic transect images. 
+
+1. 3000 random CelebA-hq images
+2. 3000 random Flickr-Faces-HQ (FFHQ) images
+3. 5000 randomly generated synthetic images from StyleGAN2
+4. 8000 synthetic transect images. 
 
 ./read-sagemaker-responses: reads sagemaker annotator responses into data files for easy analysis
 
