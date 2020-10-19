@@ -13,7 +13,7 @@ If you use this dataset, please cite our paper:
 > https://arxiv.org/abs/2007.06570
 
 ## Transects
-We generated our transect images by traversing [StyleGAN2](https://github.com/NVlabs/stylegan2)'s latent space in controlled semantic directions (plese see our paper for more details). We generated 1000 random 'seed' latent codes, and varied them along two discretization levels for three attributes:
+We generated 1000 random transects by traversing [StyleGAN2](https://github.com/NVlabs/stylegan2)'s latent space in controlled semantic directions (please see our paper for more details). We used two discretization levels for each of the three attributes:
 
 1. Skin color (dark and light)
 2. Hair Length (long and short/medium)
@@ -27,11 +27,14 @@ Note that transects may be generated for other attribute combinations. To train 
 
 ## Bias and Fairness
 
-While our transects tend to be more balanced than real datasets, they are not immune to bias and fairness issues. We note several considerations here:
+While out transects can be designed to mitigate sampling biases that exist in real datasets, they are not immune to biases such as:
 
-1. The images are generated using StyleGAN2, which in turn was trained on the FFHQ dataset. Therefore, our transects will tend to generate appearances and physiognomies characteristic of those found in FFHQ. In addition, attribute combinations that are uncommon or missing in FFHQ may not be able to be generated. 
+1. The images are generated using StyleGAN2, which in turn was trained on the FFHQ dataset. Therefore, our transects will tend to generate appearances and physiognomies characteristic of those found in FFHQ. In addition, attribute combinations that are uncommon or missing in FFHQ may not be feasibly generated. 
 
-2.  
+2. Human annotators have their own biases, which also vary based on geographical location. We do show in our paper's analyses, however, that our annotators were at fairly consistent with one another.
+
+3. Unmeasured characteristics such as ethnicity and facial structure may be strongly correlated with one of the measured attributes like skin color. This can have potentially unwanted consequences for downstream analyses. Further annotation rounds would be needed to properly account for additional attributes.
+
 
 ## Repository Contents
 
